@@ -29,7 +29,7 @@ Two terminals, side by side.
 ```bash
 cd server
 python -m venv .venv
-.venv\Scripts\activate             # macOS/Linux: source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1            # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app.main:app --reload --port 8000
 ```
