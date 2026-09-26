@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" width="520" height="130">
+  <g fill="none" stroke="currentColor" stroke-width="7.5" transform="translate(6 5)">
+    <circle cx="60" cy="60" r="53"/>
+    <path d="M44 34c0 6-5 7-5 13M60 32c0 6-5 7-5 13M76 34c0 6-5 7-5 13" stroke-width="6" stroke-linecap="round"/>
+    <path d="M33 56h46v16a23 23 0 0 1-46 0z" stroke-linejoin="round"/>
+    <path d="M79 60h6a11 11 0 0 1 0 22h-6" stroke-linecap="round"/>
+    <path d="M27 92h58" stroke-linecap="round"/>
+  </g>
+  <text x="140" y="68" font-family="Playfair Display, Georgia, serif" font-size="52" font-weight="500" fill="currentColor">Café Circle</text>
+  <text x="143" y="95" font-family="Outfit, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="6.5" fill="currentColor" opacity="0.6">RESERVE A SEAT</text>
+</svg>

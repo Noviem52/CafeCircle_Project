@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f7f3ec;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f3ec;
+  --color-on-surface: #29261f;
+  --color-outline-variant: #ded6c8;
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1c1b1b;
+  --color-on-primary-container: #858383;
+  --color-secondary: #775a19;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fed488;
+  --color-on-secondary-container: #785a1a;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+
+  --animate-veil-in: veil-in 0.22s ease-out both;
+  --animate-modal-in: modal-in 0.34s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fields-in: fields-in 0.3s ease-out both;
+  --animate-shake: shake 0.35s ease-in-out both;
+  --animate-brew-veil: brew-veil 0.3s ease-out both;
+  --animate-brew-fill: brew-fill 1.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+  --animate-brew-bar: brew-bar 1.4s ease-in-out infinite;
+  --animate-steam-a: steam 2.1s ease-in-out infinite;
+  --animate-steam-b: steam 2.1s ease-in-out 0.35s infinite;
+  --animate-steam-c: steam 2.1s ease-in-out 0.7s infinite;
+}
+
+@keyframes veil-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.965); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fields-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+
+@keyframes brew-veil {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes brew-fill {
+  from { transform: translateY(76px); }
+  to { transform: translateY(6px); }
+}
+
+@keyframes brew-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+@keyframes steam {
+  0% { opacity: 0; transform: translateY(6px) scaleY(0.75); }
+  35% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-12px) scaleY(1.2); }
+}
+
+.dark {
+  --color-surface: #1c1a17;
+  --color-surface-container-lowest: #262320;
+  --color-surface-container-low: #232019;
+  --color-on-surface: #f1ece3;
+  --color-outline-variant: #4a453c;
+  --color-primary: #f1ece3;
+  --color-on-primary: #1c1a17;
+  --color-primary-container: #3a352c;
+  --color-on-primary-container: #d8d2c5;
+  --color-secondary: #e0b565;
+  --color-on-secondary: #1c1a17;
+  --color-secondary-container: #4a3a1a;
+  --color-on-secondary-container: #f1d9a0;
+  --color-error: #ffb4a9;
+  --color-on-error: #680003;
+  --color-error-container: #930006;
+  --color-on-error-container: #ffdad4;
+
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator,
+.dark input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.6);
+}
+
+.ambient-shadow {
+  box-shadow: 0 30px 60px -15px rgba(26, 26, 26, 0.04);
+}
+
+.transition-soft {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(26, 26, 26, 0.06);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f3ec;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1c1a17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dadada;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a453c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
